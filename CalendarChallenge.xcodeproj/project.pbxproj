@@ -23,6 +23,8 @@
 		9FBD938D1E78E752009DEDAD /* ScheduleDaoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD938C1E78E752009DEDAD /* ScheduleDaoTest.swift */; };
 		9FBD938F1E78FD81009DEDAD /* ScheduleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD938E1E78FD81009DEDAD /* ScheduleValidator.swift */; };
 		9FBD93911E790951009DEDAD /* ScheduleValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93901E790951009DEDAD /* ScheduleValidatorTest.swift */; };
+		9FBD93931E791870009DEDAD /* DailyDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93921E791870009DEDAD /* DailyDisplayData.swift */; };
+		9FBD93951E7925FC009DEDAD /* DailyDisplayDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93941E7925FC009DEDAD /* DailyDisplayDataTest.swift */; };
 		BFAD9EF361EA08B4C324B89F /* Pods_CalendarChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F504AF99F6B1B23DED8E4D8 /* Pods_CalendarChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		9FBD938C1E78E752009DEDAD /* ScheduleDaoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDaoTest.swift; sourceTree = "<group>"; };
 		9FBD938E1E78FD81009DEDAD /* ScheduleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleValidator.swift; sourceTree = "<group>"; };
 		9FBD93901E790951009DEDAD /* ScheduleValidatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleValidatorTest.swift; sourceTree = "<group>"; };
+		9FBD93921E791870009DEDAD /* DailyDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDisplayData.swift; sourceTree = "<group>"; };
+		9FBD93941E7925FC009DEDAD /* DailyDisplayDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDisplayDataTest.swift; sourceTree = "<group>"; };
 		A9ED270D1C1766BB11A39535 /* Pods-CalendarChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarChallenge/Pods-CalendarChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		E82FC3D0C09D23CA6ED1AFB4 /* Pods-CalendarChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarChallengeUITests/Pods-CalendarChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +206,7 @@
 				9FBD93831E78DA17009DEDAD /* ScheduleDao.swift */,
 				9FBD93851E78DC71009DEDAD /* ScheduleModel.swift */,
 				9FBD938E1E78FD81009DEDAD /* ScheduleValidator.swift */,
+				9FBD93921E791870009DEDAD /* DailyDisplayData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				9FBD938C1E78E752009DEDAD /* ScheduleDaoTest.swift */,
 				9FBD938A1E78E29A009DEDAD /* SheduleModelTest.swift */,
 				9FBD93901E790951009DEDAD /* ScheduleValidatorTest.swift */,
+				9FBD93941E7925FC009DEDAD /* DailyDisplayDataTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				9FBD93841E78DA17009DEDAD /* ScheduleDao.swift in Sources */,
 				9FBD93861E78DC71009DEDAD /* ScheduleModel.swift in Sources */,
 				9FBD93821E78D7C2009DEDAD /* RealmHelper.swift in Sources */,
+				9FBD93931E791870009DEDAD /* DailyDisplayData.swift in Sources */,
 				9FBD93471E78C303009DEDAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +537,7 @@
 			files = (
 				9FBD935C1E78C303009DEDAD /* CalendarChallengeTests.swift in Sources */,
 				9FBD93911E790951009DEDAD /* ScheduleValidatorTest.swift in Sources */,
+				9FBD93951E7925FC009DEDAD /* DailyDisplayDataTest.swift in Sources */,
 				9FBD938D1E78E752009DEDAD /* ScheduleDaoTest.swift in Sources */,
 				9FBD938B1E78E29A009DEDAD /* SheduleModelTest.swift in Sources */,
 			);

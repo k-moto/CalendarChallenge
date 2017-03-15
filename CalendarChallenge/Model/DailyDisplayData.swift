@@ -1,0 +1,52 @@
+//
+//  DailyDisplayData.swift
+//  CalendarChallenge
+//
+//  Created by k_motoyama on 2017/03/15.
+//  Copyright © 2017年 k_moto. All rights reserved.
+//
+
+import Foundation
+import STV_Extensions
+
+class DailyDisplayData{
+    
+    func getTodayModels(models: [ScheduleModel], today: Date) -> [ScheduleModel] {
+        
+        return models.filter{ isTodayData(baseDate: $0.startTime, comparisonDate: today) }
+    }
+    
+    func getDispTitle(models: [ScheduleModel], dispDate: Date) -> String{
+        
+        let calendar = Calendar(identifier: .gregorian)
+        var scheduleTitle = ""
+        
+        for model in models {
+            let startResult = calendar.compare(dispDate, to: model.startTime!, toGranularity: .minute) != .orderedAscending
+            
+            let endResult = calendar.compare(dispDate, to: model.endTime!, toGranularity: .minute) != .orderedDescending
+
+            if startResult && endResult {
+                scheduleTitle = model.title
+                
+                break
+            }
+            
+        }
+        
+        return scheduleTitle
+    }
+    
+    private func isTodayData(baseDate: Date?, comparisonDate: Date) -> Bool{
+        let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
+        
+        var result = false
+        
+        if let baseDate = baseDate {
+           result = calendar.compare(baseDate, to: comparisonDate, toUnitGranularity: .day) == .orderedSame
+        }
+        
+        return result
+    }
+    
+}
