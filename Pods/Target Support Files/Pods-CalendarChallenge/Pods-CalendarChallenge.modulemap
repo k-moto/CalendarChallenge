@@ -1,0 +1,6 @@
+framework module Pods_CalendarChallenge {
+  umbrella header "Pods-CalendarChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
