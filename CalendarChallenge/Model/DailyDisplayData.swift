@@ -11,6 +11,17 @@ import STV_Extensions
 
 class DailyDisplayData{
     
+    func getDispTime(dispDate: Date , cellID: Int) -> Date{
+        
+        let calendar = Calendar(identifier: .gregorian)
+        
+        let hour = Int(floor(Double(cellID / 2)))
+        let minute = cellID % 2 == 0 ? 0 : 30
+        
+        return calendar.date(bySettingHour: hour, minute: minute, second: 0, of: dispDate)!
+        
+    }
+    
     func getTodayModels(models: [ScheduleModel], today: Date) -> [ScheduleModel] {
         
         return models.filter{ isTodayData(baseDate: $0.startTime, comparisonDate: today) }
@@ -48,5 +59,6 @@ class DailyDisplayData{
         
         return result
     }
+    
     
 }

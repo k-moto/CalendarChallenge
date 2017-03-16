@@ -21,6 +21,17 @@ class DailyDisplayDataTest: XCTestCase {
         super.tearDown()
     }
     
+    func testGetDispTime(){
+        
+        let format = "yyyy/MM/dd HH:mm"
+
+        let dispDate = "2017/03/15 00:00".toDate(dateFormat: format)
+        
+        let dispTime = DailyDisplayData().getDispTime(dispDate: dispDate, cellID: 47)
+        
+        XCTAssertEqual(dispTime.toStr(dateFormat: format), "2017/03/15 23:30")
+
+    }
     
     func testGetTodayModels(){
         
