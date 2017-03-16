@@ -52,7 +52,37 @@ class CalendarCellData{
         
     }
     
+    func isOneDaySchedule(models: [ScheduleModel], dispDate: Date) -> Bool {
+        
+        let thisMonthModels = models.filter{ isThisMonthData(baseDate: $0.startTime, comparisonDate: date) }
+
+        var result = false
+        
+        let format = "yyyy/MM/dd"
+        
+        for model in thisMonthModels{
+            
+            if model.startTime?.toStr(dateFormat: format) == dispDate.toStr(dateFormat: format) {
+                result = true
+                break
+            }
+            
+        }
+        
+        return result
+    }
     
-    
+    private func isThisMonthData(baseDate: Date?, comparisonDate: Date) -> Bool{
+        let calendar = Calendar(identifier: .gregorian)
+        
+        var result = false
+        
+        if let baseDate = baseDate {
+            result = calendar.compare(baseDate, to: comparisonDate, toGranularity: .month) == .orderedSame
+
+        }
+        
+        return result
+    }
     
 }

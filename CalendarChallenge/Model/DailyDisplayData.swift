@@ -49,12 +49,12 @@ class DailyDisplayData{
     }
     
     private func isTodayData(baseDate: Date?, comparisonDate: Date) -> Bool{
-        let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
+        let calendar = Calendar(identifier: .gregorian)
         
         var result = false
         
         if let baseDate = baseDate {
-           result = calendar.compare(baseDate, to: comparisonDate, toUnitGranularity: .day) == .orderedSame
+           result = calendar.compare(baseDate, to: comparisonDate, toGranularity: .day) == .orderedSame
         }
         
         return result
