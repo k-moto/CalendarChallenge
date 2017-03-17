@@ -11,9 +11,13 @@ import STV_Extensions
 
 class CalendarCellData{
     
-    let date: Date
+    var date: Date
     
     init(currentDate: Date){
+        date = currentDate
+    }
+    
+    func setDate(currentDate: Date){
         date = currentDate
     }
     
@@ -70,6 +74,13 @@ class CalendarCellData{
         }
         
         return result
+    }
+    
+    func isThisMonthData(comparisonDate: Date) -> Bool{
+        let calendar = Calendar(identifier: .gregorian)
+        
+        return calendar.compare(date, to: comparisonDate, toGranularity: .month) == .orderedSame
+        
     }
     
     private func isThisMonthData(baseDate: Date?, comparisonDate: Date) -> Bool{

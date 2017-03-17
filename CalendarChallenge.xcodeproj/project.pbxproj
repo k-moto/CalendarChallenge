@@ -26,8 +26,12 @@
 		9FBD93951E7925FC009DEDAD /* DailyDisplayDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93941E7925FC009DEDAD /* DailyDisplayDataTest.swift */; };
 		9FBD93991E79361C009DEDAD /* CalendarCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93981E79361C009DEDAD /* CalendarCellData.swift */; };
 		9FBD939B1E7B283A009DEDAD /* CalendarCellDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD939A1E7B283A009DEDAD /* CalendarCellDataTest.swift */; };
-		9FBD939D1E7B3469009DEDAD /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD939C1E7B3469009DEDAD /* CalendarCollectionView.swift */; };
+		9FBD939D1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD939C1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift */; };
 		9FBD93A21E7B3ABC009DEDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD93A01E7B3ABC009DEDAD /* Main.storyboard */; };
+		9FBD93A41E7B3D2B009DEDAD /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD93A31E7B3D2B009DEDAD /* Calendar.storyboard */; };
+		9FBD93A61E7B62CE009DEDAD /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93A51E7B62CE009DEDAD /* CalendarCollectionViewCell.swift */; };
+		9FBD93AA1E7B8A7A009DEDAD /* DailyScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93A91E7B8A7A009DEDAD /* DailyScheduleController.swift */; };
+		9FBD93AC1E7B8A9C009DEDAD /* DailySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD93AB1E7B8A9C009DEDAD /* DailySchedule.storyboard */; };
 		BFAD9EF361EA08B4C324B89F /* Pods_CalendarChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F504AF99F6B1B23DED8E4D8 /* Pods_CalendarChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +83,12 @@
 		9FBD93941E7925FC009DEDAD /* DailyDisplayDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDisplayDataTest.swift; sourceTree = "<group>"; };
 		9FBD93981E79361C009DEDAD /* CalendarCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCellData.swift; sourceTree = "<group>"; };
 		9FBD939A1E7B283A009DEDAD /* CalendarCellDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCellDataTest.swift; sourceTree = "<group>"; };
-		9FBD939C1E7B3469009DEDAD /* CalendarCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		9FBD939C1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		9FBD93A11E7B3ABC009DEDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FBD93A31E7B3D2B009DEDAD /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		9FBD93A51E7B62CE009DEDAD /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FBD93A91E7B8A7A009DEDAD /* DailyScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyScheduleController.swift; sourceTree = "<group>"; };
+		9FBD93AB1E7B8A9C009DEDAD /* DailySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailySchedule.storyboard; sourceTree = "<group>"; };
 		A9ED270D1C1766BB11A39535 /* Pods-CalendarChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarChallenge/Pods-CalendarChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		E82FC3D0C09D23CA6ED1AFB4 /* Pods-CalendarChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarChallengeUITests/Pods-CalendarChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +201,8 @@
 		9FBD93761E78C3AB009DEDAD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9FBD939C1E7B3469009DEDAD /* CalendarCollectionView.swift */,
+				9FBD939C1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift */,
+				9FBD93A51E7B62CE009DEDAD /* CalendarCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +212,9 @@
 			children = (
 				9FBD93A01E7B3ABC009DEDAD /* Main.storyboard */,
 				9FBD93481E78C303009DEDAD /* CalendarController.swift */,
+				9FBD93A31E7B3D2B009DEDAD /* Calendar.storyboard */,
+				9FBD93A91E7B8A7A009DEDAD /* DailyScheduleController.swift */,
+				9FBD93AB1E7B8A9C009DEDAD /* DailySchedule.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -365,8 +377,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBD93A41E7B3D2B009DEDAD /* Calendar.storyboard in Resources */,
 				9FBD93511E78C303009DEDAD /* LaunchScreen.storyboard in Resources */,
 				9FBD934E1E78C303009DEDAD /* Assets.xcassets in Resources */,
+				9FBD93AC1E7B8A9C009DEDAD /* DailySchedule.storyboard in Resources */,
 				9FBD93A21E7B3ABC009DEDAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,9 +546,11 @@
 			files = (
 				9FBD93491E78C303009DEDAD /* CalendarController.swift in Sources */,
 				9FBD938F1E78FD81009DEDAD /* ScheduleValidator.swift in Sources */,
+				9FBD93AA1E7B8A7A009DEDAD /* DailyScheduleController.swift in Sources */,
 				9FBD93841E78DA17009DEDAD /* ScheduleDao.swift in Sources */,
 				9FBD93861E78DC71009DEDAD /* ScheduleModel.swift in Sources */,
-				9FBD939D1E7B3469009DEDAD /* CalendarCollectionView.swift in Sources */,
+				9FBD93A61E7B62CE009DEDAD /* CalendarCollectionViewCell.swift in Sources */,
+				9FBD939D1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift in Sources */,
 				9FBD93821E78D7C2009DEDAD /* RealmHelper.swift in Sources */,
 				9FBD93991E79361C009DEDAD /* CalendarCellData.swift in Sources */,
 				9FBD93931E791870009DEDAD /* DailyDisplayData.swift in Sources */,
