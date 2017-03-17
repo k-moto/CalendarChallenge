@@ -54,8 +54,9 @@ final class CalendarCollectionViewDataSource:NSObject, UICollectionViewDataSourc
                 cell.cellText.textColor = UIColor.gray
             } else {
                 cell.cellText.textColor = setColor(dispWeekDay: dispDate.shortWeekdayStr())
+                cell.circleLabel.textColor = setColor(dispWeekDay: dispDate.shortWeekdayStr())
             }
-            cell.cellText.isHidden = isCheckSchedule(date: dispDate)
+            cell.circleLabel.isHidden = !isCheckSchedule(date: dispDate)
         }
         
         return cell

@@ -31,7 +31,10 @@ final class CalendarController: UIViewController {
         setDelegate()
 
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        calendarCollectionView.reloadData()
+    }
 
     @IBAction func clickBackButton(_ sender: Any) {
         
@@ -71,9 +74,19 @@ extension CalendarController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        // TODO 遷移
-//        navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
-        print("tap")
+        let dailySchedule =  UIStoryboard.viewController(storyboardName: "DailySchedule", identifier: "DailySchedule") as! DailyScheduleController
+        
+        let calendarCellData = CalendarCellData(currentDate: currentDate)
+        let dispDate = calendarCellData.getCellDate(cellCount: calendarCellData.getCellCount(daysPerWeek: 7))[indexPath.row]
+        
+        dailySchedule.currentDate = dispDate
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "戻る"
+        
+        self.navigationItem.backBarButtonItem = backButton
+        
+        self.navigationController?.pushViewController(dailySchedule, animated: true)
     }
 }
 
