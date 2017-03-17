@@ -27,7 +27,6 @@
 		9FBD93991E79361C009DEDAD /* CalendarCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93981E79361C009DEDAD /* CalendarCellData.swift */; };
 		9FBD939B1E7B283A009DEDAD /* CalendarCellDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD939A1E7B283A009DEDAD /* CalendarCellDataTest.swift */; };
 		9FBD939D1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD939C1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift */; };
-		9FBD93A21E7B3ABC009DEDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD93A01E7B3ABC009DEDAD /* Main.storyboard */; };
 		9FBD93A41E7B3D2B009DEDAD /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD93A31E7B3D2B009DEDAD /* Calendar.storyboard */; };
 		9FBD93A61E7B62CE009DEDAD /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93A51E7B62CE009DEDAD /* CalendarCollectionViewCell.swift */; };
 		9FBD93AA1E7B8A7A009DEDAD /* DailyScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD93A91E7B8A7A009DEDAD /* DailyScheduleController.swift */; };
@@ -88,7 +87,6 @@
 		9FBD93981E79361C009DEDAD /* CalendarCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCellData.swift; sourceTree = "<group>"; };
 		9FBD939A1E7B283A009DEDAD /* CalendarCellDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCellDataTest.swift; sourceTree = "<group>"; };
 		9FBD939C1E7B3469009DEDAD /* CalendarCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		9FBD93A11E7B3ABC009DEDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FBD93A31E7B3D2B009DEDAD /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		9FBD93A51E7B62CE009DEDAD /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FBD93A91E7B8A7A009DEDAD /* DailyScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyScheduleController.swift; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 		9FBD93791E78C459009DEDAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9FBD93A01E7B3ABC009DEDAD /* Main.storyboard */,
 				9FBD93481E78C303009DEDAD /* CalendarController.swift */,
 				9FBD93A31E7B3D2B009DEDAD /* Calendar.storyboard */,
 				9FBD93A91E7B8A7A009DEDAD /* DailyScheduleController.swift */,
@@ -394,7 +391,6 @@
 				9FBD93511E78C303009DEDAD /* LaunchScreen.storyboard in Resources */,
 				9FBD934E1E78C303009DEDAD /* Assets.xcassets in Resources */,
 				9FBD93AC1E7B8A9C009DEDAD /* DailySchedule.storyboard in Resources */,
-				9FBD93A21E7B3ABC009DEDAD /* Main.storyboard in Resources */,
 				9FBD93B41E7BAF08009DEDAD /* Schedule.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,14 +615,6 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
-			sourceTree = "<group>";
-		};
-		9FBD93A01E7B3ABC009DEDAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FBD93A11E7B3ABC009DEDAD /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

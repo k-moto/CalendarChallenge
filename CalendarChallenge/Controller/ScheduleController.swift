@@ -53,9 +53,12 @@ final class ScheduleController: UITableViewController {
         let calendar = Calendar(identifier: .gregorian)
         let datePickerView:UIDatePicker = UIDatePicker()
         
-        let format = "H"
         
-        datePickerView.minimumDate = calendar.date(bySettingHour: Int(currentDate!.toStr(dateFormat: format))!, minute: 0, second: 0, of:currentDate!)!
+        let tes = Int(currentDate!.toStr(dateFormat: "HH"))!
+        let tes2 = Int(currentDate!.toStr(dateFormat: "mm"))!
+
+        
+        datePickerView.minimumDate = calendar.date(bySettingHour: tes, minute: tes2, second: 0, of:currentDate!)!
         datePickerView.maximumDate = calendar.date(bySettingHour: 23, minute: 30, second: 0, of: currentDate!)!
         
         datePickerView.datePickerMode = UIDatePickerMode.time
@@ -69,7 +72,7 @@ final class ScheduleController: UITableViewController {
     
     func datePickerValueChanged(sender: UIDatePicker) {
         let format = "yyyy/M/d H:mm"
-        endTimeField.text = sender.date.toStr(dateFormat: format) + "〜"
+        endTimeField.text = "〜" + sender.date.toStr(dateFormat: format)
         
     }
     
@@ -100,7 +103,7 @@ final class ScheduleController: UITableViewController {
     }
     
     func onClickSaveButton(sender: UIBarButtonItem){
-        var object = ScheduleModel()
+        let object = ScheduleModel()
         
         let format = "yyyy/MM/dd HH:mm"
 
@@ -144,7 +147,7 @@ final class ScheduleController: UITableViewController {
             
         }
         
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
 
     }
     
@@ -164,7 +167,7 @@ final class ScheduleController: UITableViewController {
         
         ScheduleDao.delete(taskID: modelDatas[result].taskID)
         
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
 
     }
     

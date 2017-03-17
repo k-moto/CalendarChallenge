@@ -40,7 +40,9 @@ final class DailyScheduleTableViewDataSource:NSObject, UITableViewDataSource {
         if !dispScheduleText.isEmpty {
             cell.scheduleLabel.text = dispScheduleText
             cell.backgroundColor = UIColor.init(hex: Int("DDEFFC", radix: 16)!)
-
+        }else {
+            cell.scheduleLabel.text = ""
+            cell.backgroundColor = UIColor.white
         }
         
         return cell
