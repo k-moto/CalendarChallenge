@@ -28,7 +28,6 @@ final class DailyScheduleTableViewDataSource:NSObject, UITableViewDataSource {
         let format = "H:mm"
         
         let dispTime = DailyDisplayData().getDispTime(dispDate: currentDate,cellID: indexPath.row)
-        
         let dispTimeText = dispTime.toStr(dateFormat: format)
 
         

@@ -54,11 +54,10 @@ final class ScheduleController: UITableViewController {
         let datePickerView:UIDatePicker = UIDatePicker()
         
         
-        let tes = Int(currentDate!.toStr(dateFormat: "HH"))!
-        let tes2 = Int(currentDate!.toStr(dateFormat: "mm"))!
+        let startHour = Int(currentDate!.toStr(dateFormat: "HH"))!
+        let startMinute = Int(currentDate!.toStr(dateFormat: "mm"))!
 
-        
-        datePickerView.minimumDate = calendar.date(bySettingHour: tes, minute: tes2, second: 0, of:currentDate!)!
+        datePickerView.minimumDate = calendar.date(bySettingHour: startHour, minute: startMinute, second: 0, of:currentDate!)!
         datePickerView.maximumDate = calendar.date(bySettingHour: 23, minute: 30, second: 0, of: currentDate!)!
         
         datePickerView.datePickerMode = UIDatePickerMode.time
